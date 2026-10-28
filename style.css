@@ -14,4 +14,5 @@ dialog{color:var(--text);background:#191b1e;border:1px solid #514732;border-radi
 .top-custom-panels{max-height:78px;overflow:auto}.mod-description{font-size:11px}.mod-game{font-size:8px}.mod-meta{font-size:9px}.access-label{font-size:8px}.detail-link{font-size:10px}
 @media(max-width:800px){.mod-description{font-size:10px}.mod-game{font-size:7px}.mod-meta{font-size:8px}.detail-link{font-size:9px}}
 @media(max-width:600px){.mod-description{font-size:10px}.mod-game{font-size:7px}.mod-meta{font-size:8px}.access-label{font-size:7px}.mod-image{min-height:166px}}
+.admin-top{display:inline-flex;align-items:center;white-space:nowrap;border:1px solid #d7b77750;color:var(--gold);border-radius:4px;padding:8px 11px;font-size:10px;font-weight:600}.admin-top:hover{background:#d7b7770d}.admin-short{display:none}@media(max-width:1080px){.admin-full{display:none}.admin-short{display:inline}.admin-top{padding:7px 9px}}@media(max-width:600px){.top-inner{gap:8px}.top-join{padding:10px 9px}.admin-top{padding:7px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

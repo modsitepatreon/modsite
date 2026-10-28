@@ -1,0 +1,3 @@
+<?php if (!defined('ABSPATH')) { exit; } modsite_render_sidebar('right'); ?></div>
+<footer class="site-footer"><div class="footer"><div class="footer-row"><?php modsite_brand(); ?><span>Twoje gry. Twoje możliwości.</span></div><div class="footer-links"><?php if (has_nav_menu('footer')) { wp_nav_menu(['theme_location'=>'footer','container'=>false,'menu_class'=>'wp-footer-menu','depth'=>1]); } ?><?php if (get_privacy_policy_url()) { ?><a href="<?php echo esc_url(get_privacy_policy_url()); ?>">Polityka prywatności</a><?php } ?></div><p>© <?php echo esc_html(wp_date('Y')); ?> Modsite</p></div></footer>
+<?php wp_footer(); ?></body></html>

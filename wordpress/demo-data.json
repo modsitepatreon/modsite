@@ -1,0 +1,132 @@
+{
+  "games": [
+    {
+      "id": "ets2",
+      "name": "Euro Truck Simulator 2",
+      "short": "ETS 2"
+    },
+    {
+      "id": "ats",
+      "name": "American Truck Simulator",
+      "short": "American Truck"
+    },
+    {
+      "id": "farm",
+      "name": "Farming Simulator 22",
+      "short": "Farming Simulator"
+    },
+    {
+      "id": "skyrim",
+      "name": "The Elder Scrolls V: Skyrim",
+      "short": "Skyrim"
+    },
+    {
+      "id": "cyberpunk",
+      "name": "Cyberpunk 2077",
+      "short": "Cyberpunk 2077"
+    },
+    {
+      "id": "sims",
+      "name": "The Sims 4",
+      "short": "The Sims 4"
+    }
+  ],
+  "mods": [
+    {
+      "id": 1,
+      "game": "ets2",
+      "title": "Realistyczne światło & pogoda",
+      "description": "Naturalne oświetlenie, głębsze kolory i zupełnie nowa atmosfera na każdej trasie.",
+      "category": "Grafika i pogoda",
+      "version": "1.0",
+      "size": "245 MB",
+      "date": "2026-10-28",
+      "updated": "2026-10-28",
+      "tag": "WYRÓŻNIONE"
+    },
+    {
+      "id": 2,
+      "game": "ats",
+      "title": "Amerykańskie szlaki — otoczenie",
+      "description": "Więcej detali przy drodze. Odkryj na nowo krajobrazy amerykańskich tras.",
+      "category": "Mapy i otoczenie",
+      "version": "1.0",
+      "size": "380 MB",
+      "date": "2026-10-27",
+      "updated": "2026-10-27",
+      "tag": "NOWOŚĆ"
+    },
+    {
+      "id": 3,
+      "game": "farm",
+      "title": "Nowoczesne gospodarstwo",
+      "description": "Nowy zestaw maszyn i akcesoriów, które urozmaicą codzienną pracę na farmie.",
+      "category": "Pojazdy",
+      "version": "1.1",
+      "size": "186 MB",
+      "date": "2026-10-26",
+      "updated": "2026-10-28",
+      "tag": "AKTUALIZACJA"
+    },
+    {
+      "id": 4,
+      "game": "ets2",
+      "title": "Wnętrza kabin — kolekcja",
+      "description": "Zadbaj o każdy detal swojej ciężarówki. Dodatki do kabiny w spójnym stylu.",
+      "category": "Pojazdy",
+      "version": "1.0",
+      "size": "92 MB",
+      "date": "2026-10-25",
+      "updated": "2026-10-25",
+      "tag": ""
+    },
+    {
+      "id": 5,
+      "game": "skyrim",
+      "title": "Dzikie krajobrazy Skyrim",
+      "description": "Bujniejsze lasy, więcej roślinności i detale, które zachęcają do kolejnej wyprawy.",
+      "category": "Mapy i otoczenie",
+      "version": "1.0",
+      "size": "512 MB",
+      "date": "2026-10-24",
+      "updated": "2026-10-24",
+      "tag": ""
+    },
+    {
+      "id": 6,
+      "game": "cyberpunk",
+      "title": "Night City — filmowe kolory",
+      "description": "Przygaszone światło dnia i wyraziste neony. Zobacz miasto w nowej odsłonie.",
+      "category": "Grafika i pogoda",
+      "version": "1.0",
+      "size": "18 MB",
+      "date": "2026-10-23",
+      "updated": "2026-10-23",
+      "tag": ""
+    },
+    {
+      "id": 7,
+      "game": "sims",
+      "title": "Codzienne historie",
+      "description": "Drobne zmiany w codziennych aktywnościach Simów. Jeszcze więcej własnych historii.",
+      "category": "Rozgrywka",
+      "version": "1.0",
+      "size": "34 MB",
+      "date": "2026-10-22",
+      "updated": "2026-10-22",
+      "tag": ""
+    },
+    {
+      "id": 8,
+      "game": "ets2",
+      "title": "Dźwięki drogi — pakiet audio",
+      "description": "Dźwięki otoczenia, deszczu i ruchu drogowego, które budują klimat długich tras.",
+      "category": "Rozgrywka",
+      "version": "1.0",
+      "size": "124 MB",
+      "date": "2026-10-21",
+      "updated": "2026-10-21",
+      "tag": ""
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # Modsite — wersja demonstracyjna
 
+## Testowy panel WordPress
+
+Otwórz [Panel WordPress](https://modsitepatreon.github.io/modsite/wordpress/), aby uruchomić prawdziwego WordPressa z motywem Modsite. Zmiany zapisują się w lokalnej kopii w Twojej przeglądarce; korzystaj z zapisu w przeglądarce i eksportu ZIP. Instrukcja oraz źródła: [wordpress/README.md](wordpress/README.md).
+
+## Publiczny podgląd
+
 Czarno-złoty projekt katalogu modyfikacji do gier. Repozytorium zawiera statyczny podgląd przeznaczony do dopracowywania strony, bez aktywnych płatności ani rejestracji.
 
 ## Funkcje podglądu

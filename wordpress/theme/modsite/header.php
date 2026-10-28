@@ -1,0 +1,8 @@
+<?php if (!defined('ABSPATH')) { exit; } ?><!doctype html>
+<html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo('charset'); ?>"><meta name="viewport" content="width=device-width,initial-scale=1"><?php wp_head(); ?></head>
+<body <?php body_class(); ?>><?php wp_body_open(); ?><a class="skip" href="#main">Przejdź do treści</a>
+<header class="topbar"><div class="top-inner"><?php modsite_brand(); ?>
+<nav class="topnav" aria-label="Nawigacja główna"><?php if (has_nav_menu('primary')) { wp_nav_menu(['theme_location'=>'primary','container'=>false,'menu_class'=>'wp-top-menu','depth'=>1]); } else { ?><a href="<?php echo esc_url(home_url('/')); ?>">Modyfikacje</a><a href="<?php echo esc_url(modsite_theme_url('levels')); ?>">Subskrypcja</a><?php } ?></nav><div class="top-spacer"></div>
+<?php if (is_user_logged_in()) { ?><?php if (current_user_can('manage_options')) { ?><a class="button gold top-join" href="<?php echo esc_url(admin_url('admin.php?page=modsite')); ?>">Panel Modsite</a><?php } ?><a class="login-top" href="<?php echo esc_url(modsite_theme_url('account')); ?>">Moje konto</a><a class="login-top" href="<?php echo esc_url(wp_logout_url(home_url('/'))); ?>">Wyloguj</a><?php } else { ?><a class="login-top" href="<?php echo esc_url(modsite_theme_url('login')); ?>">Zaloguj się</a><a class="button gold top-join" href="<?php echo esc_url(modsite_theme_url('register')); ?>">Dołącz do Modsite →</a><?php } ?>
+<button class="icon-button mobile-menu" id="mobile-menu" aria-label="Otwórz menu" aria-expanded="false">☰</button></div><div class="top-custom-panels"><?php dynamic_sidebar('modsite-top'); ?></div></header>
+<div class="page-shell"><?php modsite_render_sidebar('left'); ?>
