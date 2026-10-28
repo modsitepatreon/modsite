@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Modsite — odkrywaj modyfikacje do ulubionych gier. Katalog modów z wygodnym dostępem w subskrypcji.">
+  <meta name="theme-color" content="#101113"><title>Modsite — Twoja gra. Więcej możliwości.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">Przejdź do modyfikacji</a>
+  <header class="topbar">
+    <div class="top-inner">
+      <a class="brand" href="#" aria-label="Modsite — strona główna">MOD<span>SITE</span><i></i></a>
+      <nav class="topnav" aria-label="Nawigacja główna"><a class="active" href="#catalog">Modyfikacje</a><button data-action="games">Gry</button><button data-modal="how">Jak to działa</button></nav>
+      <div class="top-spacer"></div>
+      <span class="preview-pill">PODGLĄD PROJEKTU</span>
+      <button class="icon-button panel-settings" data-modal="panels" aria-label="Dostosuj panele" title="Dostosuj panele"><span data-icon="sliders"></span></button>
+      <button class="login-top" data-modal="login" aria-label="Zaloguj się"><span data-icon="user"></span><span>Zaloguj się</span></button>
+      <button class="button gold top-join" data-modal="subscribe">Dołącz do Modsite <span data-icon="arrow"></span></button>
+      <button class="icon-button mobile-menu" data-action="menu" aria-label="Otwórz menu gier" aria-expanded="false"><span data-icon="menu"></span></button>
+    </div>
+    <div id="top-panels" class="top-custom-panels"></div>
+  </header>
+  <div class="page-shell">
+    <aside class="left-sidebar" id="game-sidebar" aria-label="Gry i kategorie">
+      <div class="side-title">ODKRYWAJ</div>
+      <button class="side-item active" data-game="all"><span data-icon="grid"></span>Wszystkie mody<span class="count">8</span></button>
+      <button class="side-item" data-action="saved"><span data-icon="bookmark"></span>Zapisane<span class="count" id="saved-count">0</span></button>
+      <div class="sidebar-divider"></div>
+      <div class="side-title">TWOJE ULUBIONE ŚWIATY</div>
+      <div id="game-list"></div>
+      <div class="sidebar-divider"></div>
+      <div class="side-title">KATEGORIE</div>
+      <button class="side-item" data-category="Grafika i pogoda"><span data-icon="sun"></span>Grafika i pogoda</button>
+      <button class="side-item" data-category="Pojazdy"><span data-icon="truck"></span>Pojazdy</button>
+      <button class="side-item" data-category="Mapy i otoczenie"><span data-icon="map"></span>Mapy i otoczenie</button>
+      <button class="side-item" data-category="Rozgrywka"><span data-icon="gamepad"></span>Rozgrywka</button>
+      <div id="left-panels" class="custom-panels"></div>
+      <div class="side-help"><span data-icon="help"></span><div><b>Pierwszy raz z modami?</b><button data-modal="how">Zobacz, jak zacząć <span>↗</span></button></div></div>
+      <div class="side-bottom">STWORZONE DLA GRACZY<span class="tiny-line"></span></div>
+    </aside>
+    <main id="main">
+      <div class="intro-label"><span class="live-dot"></span> TWOJA GRA. WIĘCEJ MOŻLIWOŚCI.</div>
+      <div class="intro-row"><h1>Zmień zasady <em>gry.</em></h1><span class="catalog-tag">KATALOG MODYFIKACJI</span></div>
+      <p class="intro-copy">Odkrywaj nowe możliwości swoich ulubionych gier.<br> Wybierz modyfikację. Odmień swoją rozgrywkę.</p>
+      <section class="featured" aria-labelledby="featured-title">
+        <img src="assets/hero.jpg" alt="Ciężarówka na drodze w Euro Truck Simulator 2" class="featured-bg" fetchpriority="high">
+        <div class="featured-shade"></div><span class="featured-label"><span data-icon="sparkles"></span> WYRÓŻNIONA MODYFIKACJA</span>
+        <div class="featured-content"><span class="game-eyebrow">EURO TRUCK SIMULATOR 2</span><h2 id="featured-title">Jeszcze bliżej<br>prawdziwej drogi.</h2><p>Odkryj pakiet realistycznego światła i pogody.</p><button class="button gold" data-detail="1">Odkryj modyfikację <span data-icon="arrow"></span></button></div>
+        <span class="featured-bottom">01 <span>/ 08</span><i></i></span><span class="featured-sample">Wpis przykładowy</span>
+      </section>
+      <section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
+        <div class="section-head"><h2 id="catalog-title">Odkrywaj modyfikacje<span id="result-count">8</span></h2><button class="text-button" id="reset-filters" hidden>Wyczyść filtry <span data-icon="x"></span></button></div>
+        <div class="catalog-toolbar"><label class="search"><span data-icon="search"></span><input id="search" type="search" placeholder="Szukaj modyfikacji, gry…" aria-label="Szukaj modyfikacji"></label><label class="sort-label"><span class="sr-only">Sortowanie</span><select id="sort"><option value="newest">Najnowsze</option><option value="az">Nazwa: A–Z</option><option value="updated">Ostatnio zaktualizowane</option></select></label></div>
+        <div class="filter-chips" id="filter-chips"><button class="chip selected" data-game="all">Wszystkie</button><button class="chip" data-game="ets2">ETS 2</button><button class="chip" data-game="ats">American Truck</button><button class="chip" data-game="farm">Farming Simulator</button><button class="chip" data-action="games">Więcej gier <span data-icon="chevron"></span></button></div>
+        <div class="results-status" id="results-status" aria-live="polite"></div>
+        <div class="mod-list" id="mod-list"></div>
+        <div class="catalog-end"><span></span><p id="catalog-end-text">To wszystkie modyfikacje w podglądzie</p><span></span></div>
+      </section>
+      <footer class="footer"><div class="footer-row"><a class="brand small" href="#">MOD<span>SITE</span><i></i></a><span>Twoje gry. Twoje możliwości.</span></div><div class="footer-links"><button data-modal="about">O projekcie</button><button data-modal="how">Pomoc</button><button data-modal="privacy">Prywatność</button><button data-modal="terms">Zasady subskrypcji</button><button data-modal="credits">Źródła grafik</button></div><p>© 2026 Modsite. Projekt demonstracyjny — przykładowe wpisy. Konta, płatności i pobieranie nie są jeszcze uruchomione.</p></footer>
+    </main>
+    <aside class="right-sidebar" aria-label="Subskrypcja i aktualności">
+      <section class="membership-panel"><div class="membership-top"><span data-icon="crown"></span><span>MODSITE MEMBERSHIP</span><i></i></div><h2>Więcej z gry.<br><em>W jednym miejscu.</em></h2><p>Jedna subskrypcja. Dostęp do linków i kolejnych aktualizacji.</p><ul><li><span data-icon="check"></span>Linki do modyfikacji</li><li><span data-icon="check"></span>Nowości w katalogu</li><li><span data-icon="check"></span>Instrukcje instalacji</li></ul><button class="button gold wide" data-modal="subscribe">Odkryj subskrypcję <span data-icon="arrow"></span></button><div class="membership-meta"><span data-icon="lock"></span>Plan miesięczny · PayPal</div></section>
+      <section class="panel news-panel"><div class="panel-heading"><span class="live-dot"></span><h2>Z tablicy Modsite</h2></div><div class="news-item"><span class="news-category">WITAJ W MODSITE</span><h3>Twoja biblioteka nowych możliwości</h3><p>Znajdź grę, wybierz mod i sprawdź instrukcję instalacji.</p></div><div class="news-item"><span class="news-category">WARTO WIEDZIEĆ</span><h3>Sprawdź wersję swojej gry</h3><p>Przed instalacją moda upewnij się, że jest zgodny z Twoją wersją gry.</p></div><button class="text-button news-link" data-modal="how">Jak korzystać z Modsite <span data-icon="arrow"></span></button></section>
+      <div id="right-panels" class="custom-panels"></div>
+      <div class="small-note"><span data-icon="shield"></span><p>Pliki na zewnętrznym hostingu.<br>Wygodny dostęp z Twojego konta.</p></div>
+      <button class="customize-button" data-modal="panels"><span data-icon="sliders"></span>Dostosuj panele podglądu</button>
+    </aside>
+  </div>
+  <dialog id="modal"><div class="modal-inner"><button class="icon-button modal-close" data-action="close" aria-label="Zamknij okno"><span data-icon="x"></span></button><div id="modal-content"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
