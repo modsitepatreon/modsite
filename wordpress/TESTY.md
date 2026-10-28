@@ -14,8 +14,10 @@ Testy zakończyły się poprawnie:
 - Darmowy poziom nie odblokowuje płatnych plików.
 - Walidacja URL: HTTPS dozwolone, HTTP, JavaScript i dane logowania w URL odrzucone.
 - Wymuszenie testowej ręcznej bramki płatniczej.
-- Poprawny eksport ZIP całej instalacji.
+- Utworzenie i kontrola integralności archiwum ZIP całej instalacji.
 
 Kontrola eksportu potwierdziła: aktywny motyw Modsite, język WordPressa `pl_PL`, osiem modów, jeden domyślny administrator, brak narzuconego planu i brak wypełnionych prywatnych linków. Użytkownik, plany i grupa użyte przez testy zostały usunięte.
+
+W przeglądarce potwierdzono zapis lokalnej instancji oraz działanie prawdziwego panelu Modsite. Odtwarzanie archiwum przez Playground CLI 3.1.61 nie przeszło testu: oficjalny importer zgłosił błąd kopiowania plików podczas zastępowania instalacji. Tego archiwum nie publikujemy jako sprawdzonej kopii do przywracania. Przed przeniesieniem własnych danych należy sprawdzić odtworzenie eksportu pobranego bezpośrednio w interfejsie Playground; migracja na docelowy hosting również wymaga osobnego testu.
 
 Nie podłączano rzeczywistego konta PayPal, aplikacji Google ani wysyłki poczty. Ich testy odbędą się po konfiguracji docelowej domeny i kont operatorów. Tłumaczenia części zewnętrznych rozszerzeń mogą być niepełne; własny panel Modsite i WordPress są ustawione po polsku.
