@@ -58,5 +58,7 @@ if (!is_wp_error($menu)) {
     set_theme_mod('nav_menu_locations',['primary'=>$menu]);
 }
 delete_transient('_pmpro_activation_redirect');
+// The prepared Modsite dashboard replaces PMPro's first-activation wizard.
+delete_option('pmpro_wizard_redirect');
 flush_rewrite_rules();
 echo 'MODSITE_SETUP_OK: '.wp_count_posts('modsite_mod')->publish.' mods; WordPress '.get_bloginfo('version').'; PMPro '.(defined('PMPRO_VERSION')?PMPRO_VERSION:'missing');
